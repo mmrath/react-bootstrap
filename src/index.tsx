@@ -6,10 +6,10 @@ export { default as AccordionCollapse } from './AccordionCollapse';
 export type { AccordionCollapseProps } from './AccordionCollapse';
 
 export {
-  default as AccordionToggle,
-  useAccordionToggle,
-} from './AccordionToggle';
-export type { AccordionToggleProps } from './AccordionToggle';
+  default as AccordionButton,
+  useAccordionButton,
+} from './AccordionButton';
+export type { AccordionButtonProps } from './AccordionButton';
 
 export { default as Alert } from './Alert';
 export type { AlertProps } from './Alert';
@@ -73,9 +73,6 @@ export type { FormControlProps } from './FormControl';
 
 export { default as FormCheck } from './FormCheck';
 export type { FormCheckProps } from './FormCheck';
-
-export { default as FormFile } from './FormFile';
-export type { FormFileProps } from './FormFile';
 
 export { default as FormGroup } from './FormGroup';
 export type { FormGroupProps } from './FormGroup';

@@ -24,7 +24,6 @@ import {
   Fade,
   Figure,
   Form,
-  FormFile,
   FormControl,
   Image,
   InputGroup,
@@ -82,21 +81,17 @@ const MegaComponent = () => (
       bsPrefix="accordion"
       style={style}
     >
-      <Card>
-        <Card.Header>
-          <Accordion.Toggle as="div" eventKey="0" onClick={noop} style={style}>
-            Click me!
-          </Accordion.Toggle>
-        </Card.Header>
-        <Accordion.Collapse eventKey="0" style={style}>
-          <Card.Body>Hello! I am the body</Card.Body>
-        </Accordion.Collapse>
-      </Card>
+      <Accordion.Item eventKey="0">
+        <Accordion.Header as="div" onClick={noop} style={style}>
+          Click me!
+        </Accordion.Header>
+        <Accordion.Body>Body</Accordion.Body>
+      </Accordion.Item>
     </Accordion>
     <Badge as="div" pill={false} style={style}>
       42
     </Badge>
-    <Badge as="a" href="#" variant="primary" pill>
+    <Badge as="a" href="#" bg="primary" pill>
       42
     </Badge>
     <Breadcrumb
@@ -122,7 +117,6 @@ const MegaComponent = () => (
     <Button
       active={false}
       as="a"
-      block={false}
       disabled={false}
       href="#"
       size="lg"
@@ -497,37 +491,6 @@ const MegaComponent = () => (
           <Form.Control type="text" placeholder="Hoizontal" />
         </Col>
       </Form.Group>
-      <Form.File
-        as="div"
-        id="custom-file"
-        label="Custom file input"
-        button="Browse custom"
-        disabled
-        feedback="feedback"
-        feedbackTooltip
-        inputAs="input"
-        isInvalid
-        isValid
-        bsPrefix="formfile"
-        size="sm"
-        style={style}
-      >
-        <Form.File.Label htmlFor="id" bsPrefix="formfilelabel" style={style} />
-        <Form.File.Input
-          as="input"
-          id="id"
-          isInvalid
-          isValid
-          bsPrefix="formfileinput"
-          style={style}
-        />
-      </Form.File>
-      <Form.File
-        ref={React.createRef<HTMLInputElement & FormFile>()}
-        id="custom-file-ref"
-        label="Custom file input"
-      />
-
       <Form.Switch label="Switch" disabled />
       <Form.Control type="color" />
     </Form>
